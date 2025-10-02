@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Universidad</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Estructura fija del App Shell -->
+  <header>
+    <h1>Mi Universidad</h1>
+  </header>
+
+  <aside>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Materias</li>
+        <li>Horarios</li>
+        <li>Perfil</li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main id="content">
+    <!-- Contenido dinámico -->
+  </main>
+
+  <footer>
+    Universidad XYZ – 2025
+  </footer>
+
+  <script src="app.js"></script>
+  <script>
+    // Registrar Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Service Worker registrado'))
+        .catch(err => console.log('Error SW:', err));
+    }
+  </script>
+</body>
+</html>
